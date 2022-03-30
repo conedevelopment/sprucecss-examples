@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block variables
+  -var title = 'Auth Example'
+
+block content
+  main(class='site-auth')
+    div(class='site-auth__inner')
+      img(class='site-auth__logo' src='../../assets/img/spruce-logo-dark.svg' alt='Spruce CSS')
+      div(class='site-auth__panel')
+        form(method='POST' action='#')
+          div(class='form-group-stack')
+            div(class='form-group')
+              label(class='form-label' for='email') Email
+              input(id='email' class='form-control' type='text' name='email' value required autocomplete='off' autofocus)
+            div(class='form-group')
+              label(class='form-label' for='password') Password
+              input(id='password' class='form-control' type='password' name='password' require autocomplete='off')
+            div(class='form-group')
+              label(class='form-check form-check--lg' for='remember')
+                input(id='remember' class='form-check__control' type='checkbox' name='remember')
+                span(class='form-label form-check__label') Remember me
+            div(class='form-group')
+              button(class='btn btn--primary' type='submit') Login

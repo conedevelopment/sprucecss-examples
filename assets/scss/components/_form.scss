@@ -1,0 +1,5 @@
+@use 'sprucecss/scss/spruce';
+
+.form-group-stack {
+  @include spruce.layout-stack(spruce.spacer(s));
+}
