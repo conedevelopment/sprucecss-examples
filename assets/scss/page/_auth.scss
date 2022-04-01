@@ -1,30 +1,41 @@
+@use 'sass:color';
 @use 'sprucecss/scss/spruce';
 
-.site-auth {
-  align-items: center;
-  background: linear-gradient(180deg, hsl(217, 100%, 97%) 4%, #fff);
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  padding: spruce.spacer(s);
-
+.auth-screen {
   &__inner {
-    max-width: 25rem;
-    width: 100%;
+    align-items: center;
+    background: linear-gradient(180deg, hsl(217, 100%, 97%) 4%, #fff);
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    min-height: 100vh;
   }
 
-  &__logo {
-    margin-block-end: spruce.spacer(m);
-    margin-inline: auto;
-    width: 9rem;
+  &__info {
+    background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80');
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    padding: spruce.spacer(l);
+    z-index: 1;
+
+    &::before {
+      background-color: color.adjust(spruce.color(primary, $only-color: true), $lightness: -20%);
+      content: '';
+      inset: 0;
+      opacity: 0.85;
+      position: absolute;
+      z-index: -1
+    }
   }
 
-  &__panel {
+  &__form {
+    align-items: center;
     background-color: spruce.color(background);
     border: 1px solid var(--spruce-sidebar-color-border);
-    border-radius: spruce.$border-radius-lg;
+    display: flex;
+    height: 100%;
+    justify-content: center;
     padding: clamp(2rem, 2vw + 1rem, 2.5rem);
   }
 
@@ -32,3 +43,34 @@
     margin-block-end: spruce.spacer(s);
   }
 }
+
+.auth-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__logo {
+    margin-block-end: spruce.spacer(m);
+    width: 9rem;
+  }
+
+  &__caption {
+    @include spruce.layout-stack(spruce.spacer(s));
+    max-width: 25rem;
+  }
+
+  &__title {
+    color: hsl(0 0% 100%);
+  }
+
+  &__description {
+    color: hsl(0 0% 100%);
+  }
+}
+
+.auth-form {
+  width: 40rem;
+  max-width: 100%;
+}
+

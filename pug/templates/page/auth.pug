@@ -4,21 +4,30 @@ block variables
   -var title = 'Auth Example'
 
 block content
-  main(class='site-auth')
-    div(class='site-auth__inner')
-      img(class='site-auth__logo' src='../../assets/img/spruce-logo-dark.svg' alt='Spruce CSS')
-      div(class='site-auth__panel')
-        form(method='POST' action='#')
-          div(class='form-group-stack')
-            div(class='form-group')
-              label(class='form-label' for='email') Email
-              input(id='email' class='form-control' type='text' name='email' value required autocomplete='off' autofocus)
-            div(class='form-group')
-              label(class='form-label' for='password') Password
-              input(id='password' class='form-control' type='password' name='password' require autocomplete='off')
-            div(class='form-group')
-              label(class='form-check form-check--lg' for='remember')
-                input(id='remember' class='form-check__control' type='checkbox' name='remember')
-                span(class='form-label form-check__label') Remember me
-            div(class='form-group')
-              button(class='btn btn--primary' type='submit') Login
+  main(class='auth-screen')
+    div(class='auth-screen__inner')
+      div(class='auth-screen__info')
+        div(class='auth-info')
+          img(class='auth-info__logo' src='../../assets/img/spruce-logo-light.svg' alt='Spruce CSS')
+          div(class='auth-info__caption')
+            h2(class='auth-info__title') Welcome here
+            p(class='auth-info__description') Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae, eleifend a neque. Praesent feugiat, urna id pellentesque pulvinar, sapien mi consectetur felis, a varius enim odio nec tellus.
+      div(class='auth-screen__form')
+        div(class='auth-form')
+          h1(class='auth-form__title') Login
+          p(class='auth-form__description') Donec quis magna sed dolor blandit facilisis ut sed velit. Pellentesque a malesuada nisl.
+          form(method='POST' action='#')
+            div(class='form-group-stack')
+              div(class='form-group')
+                label(class='form-label' for='email') Email
+                input(id='email' class='form-control form-control--lg' type='text' name='email' value required autocomplete='off' autofocus)
+              div(class='form-group')
+                label(class='form-label' for='password') Password #[a(href='#') Forgot password?]
+                input(id='password' class='form-control form-control--lg' type='password' name='password' require autocomplete='off')
+              div(class='form-group')
+                label(class='form-check form-check--lg' for='remember')
+                  input(id='remember' class='form-check__control' type='checkbox' name='remember')
+                  span(class='form-label form-check__label') Remember me
+              div(class='form-group')
+                button(class='btn btn--primary btn--lg btn--block' type='submit') Login
+          p Not a member? #[a(href='#') Sign up]
