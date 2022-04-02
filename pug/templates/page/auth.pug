@@ -12,12 +12,7 @@ block content
           div(class='auth-info__caption')
             h2(class='auth-info__title') Morbi nec ultricies risus curabitur nibh eros
             p(class='auth-info__description') Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae
-          nav(class='auth-info__navigation')
-            ul
-              li
-                a(href='#') Home
-              li
-                a(href='#') Support
+          p(class='auth-info__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
       div(class='auth-screen__form')
         div(class='auth-form')
           h1(class='auth-form__title') Login
@@ -28,7 +23,7 @@ block content
                 label(class='form-label' for='email') Email
                 input(id='email' class='form-control form-control--lg' type='text' name='email' value required autocomplete='off' autofocus)
               div(class='form-group')
-                label(class='form-label' for='password') Password #[a(href='#') Forgot password?]
+                label(class='form-label' for='password' style='display: flex; justify-content: space-between;') Password #[a(href='#') Forgot password?]
                 input(id='password' class='form-control form-control--lg' type='password' name='password' require autocomplete='off')
               div(class='form-group')
                 label(class='form-check form-check--lg' for='remember')

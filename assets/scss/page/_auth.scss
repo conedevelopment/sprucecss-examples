@@ -3,21 +3,30 @@
 
 .auth-screen {
   &__inner {
-    align-items: center;
     background-attachment: fixed;
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
+
+    @include spruce.breakpoint(md) {
+      align-items: center;
+      flex-direction: row;
+    }
   }
 
   &__info {
-    background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80');
+    background-image: url('../img/background/marita-kavelashvili-ugnrXk1129g-unsplash.jpg');
     background-size: cover;
     height: 100%;
-    inset: 0 auto 0 0;
-    position: fixed;
     padding: spruce.spacer(l);
+    position: relative;
     z-index: 1;
-    width: 30rem;
+
+    @include spruce.breakpoint(md) {
+      inset: 0 auto 0 0;
+      position: fixed;
+      width: 30rem;
+    }
 
     &::before {
       background-color: color.adjust(spruce.color(primary, $only-color: true), $lightness: -20%);
@@ -31,17 +40,20 @@
 
   &__form {
     align-items: center;
-    background-color: spruce.color(background);
     display: flex;
     height: 100%;
     justify-content: center;
-    margin-inline-start: 30rem;
     padding: spruce.spacer(l);
-    width: calc(100vw - 30rem);
+
+    @include spruce.breakpoint(md) {
+      margin-inline-start: 30rem;
+      width: calc(100vw - 30rem);
+    }
   }
 }
 
 .auth-info {
+  color: hsl(0 0% 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,12 +61,13 @@
 
   &__logo {
     margin-block-end: spruce.spacer(m);
-    width: 9rem;
+    width: 7rem;
   }
 
   &__caption {
     @include spruce.layout-stack(spruce.spacer(s));
     max-width: 25rem;
+    padding-block: spruce.spacer(l);
   }
 
   &__title {
@@ -62,24 +75,17 @@
     font-weight: 400;
   }
 
-  &__description {
-    color: hsl(0 0% 100%);
+  &__credit {
+    margin-block: 0;
   }
 
-  &__navigation {
-    ul {
-      @include spruce.clear-list;
-      display: flex;
-      gap: spruce.spacer(s);
+  a {
+    color: hsl(0 0% 100%);
+    text-decoration: underline;
 
-      > li {
-        margin-block-start: 0;
-      }
-
-      a {
-        color: hsl(0 0% 100%);
-        text-decoration: none;
-      }
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 }

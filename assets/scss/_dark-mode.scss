@@ -1,0 +1,14 @@
+@use 'sprucecss/scss/spruce';
+
+@include spruce.generate-color-variables(
+  spruce.$dark-colors,
+  ':root[data-theme-mode="dark"]'
+);
+
+[data-theme-mode="dark"] {
+  color-scheme: dark;
+
+  .auth-screen__info::before {
+    background-color: hsl(215 100% 21%);
+  }
+}
