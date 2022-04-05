@@ -1,0 +1,11 @@
+include ../../assets/mixins
+
+div(id='theme-switcher' class='theme-switcher')
+  span(class='theme-switcher__icon')
+    +icon('system-mode', 'theme-switcher__icon--system')
+    +icon('light-mode', 'theme-switcher__icon--light')
+    +icon('dark-mode', 'theme-switcher__icon--dark')
+  select(class='js-switch-theme-mode theme-switcher__select' aria-label='Select a theme')
+    option(value='system') System
+    option(value='light') Light
+    option(value='dark') Dark

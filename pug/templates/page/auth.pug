@@ -8,15 +8,17 @@ block content
     div(class='auth-screen__inner')
       div(class='auth-screen__info')
         div(class='auth-info')
-          img(class='auth-info__logo' src='../../assets/img/spruce-logo-light.svg' alt='Spruce CSS')
+          a(href='auth.html')
+            img(class='auth-info__logo' src='../../assets/img/spruce-logo-light.svg' alt='Spruce CSS')
           div(class='auth-info__caption')
             h2(class='auth-info__title') Morbi nec ultricies risus curabitur nibh eros
-            p(class='auth-info__description') Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae
-          p(class='auth-info__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
+            p Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae
+          include ../components/theme-switcher
+          // p(class='auth-info__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
       div(class='auth-screen__form')
         div(class='auth-form')
           h1(class='auth-form__title') Login
-          p(class='auth-form__description') Donec quis magna sed dolor blandit facilisis ut sed velit. Pellentesque a malesuada nisl.
+          p Donec quis magna sed dolor blandit facilisis ut sed velit. Pellentesque a malesuada nisl.
           form(method='POST' action='#')
             div(class='form-group-stack')
               div(class='form-group')
