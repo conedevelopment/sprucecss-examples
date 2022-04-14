@@ -5,6 +5,10 @@
   display: inline-flex;
   position: relative;
 
+  &[data-theme-mode='system'] .icon-system { display: inline-block; }
+  &[data-theme-mode='light'] .icon-light { display: inline-block; }
+  &[data-theme-mode='dark'] .icon-dark { display: inline-block; }
+
   &__icon {
     align-items: center;
     display: flex;
@@ -14,10 +18,6 @@
     position: absolute;
     width: 2rem;
     color: spruce.color(heading);
-
-    &.is-system .is-system { display: inline-block; }
-    &.is-light .is-light { display: inline-block; }
-    &.is-dark .is-dark { display: inline-block; }
 
     svg {
       display: none;

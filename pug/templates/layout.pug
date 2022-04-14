@@ -7,6 +7,7 @@ html(lang='en' data-theme-mode='light')
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title Spruce CSS - #{title}
+    script(src='../../assets/js/theme-switcher.js')
     link(rel='icon' href='../../assets/img/favicon.png' sizes='32x32')
     link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
 
@@ -14,4 +15,4 @@ html(lang='en' data-theme-mode='light')
     block content
     include ../../assets/icon/icons.svg
 
-    script(src='../assets/js/main.js')
+    script(src='../../assets/js/theme-switcher-handle.js')
