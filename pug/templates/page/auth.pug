@@ -6,15 +6,16 @@ block variables
 block content
   main(class='auth-screen')
     div(class='auth-screen__inner')
-      div(class='auth-screen__info')
-        div(class='auth-info')
+      div(class='auth-screen__sidebar')
+        div(class='auth-sidebar')
           a(href='auth.html')
-            img(class='auth-info__logo' src='../../assets/img/spruce-logo-light.svg' alt='Spruce CSS')
-          div(class='auth-info__caption')
-            h2(class='auth-info__title') Morbi nec ultricies risus curabitur nibh eros
+            img(class='auth-sidebar__logo' src='../../assets/img/spruce-logo-light.svg' alt='Spruce CSS')
+          div(class='auth-sidebar__caption')
+            h2(class='auth-sidebar__title') Morbi nec ultricies risus curabitur nibh eros
             p Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae
-          include ../components/theme-switcher
-          // p(class='auth-info__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
+          div(class='auth-sidebar__footer')
+            include ../components/theme-switcher
+            p(class='auth-sidebar__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
       div(class='auth-screen__form')
         div(class='auth-form')
           h1(class='auth-form__title') Login

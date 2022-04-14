@@ -11,13 +11,13 @@
 
   &__icon {
     align-items: center;
+    color: spruce.color(heading);
     display: flex;
     inset: 0 auto 0 0;
     justify-content: center;
     pointer-events: none;
     position: absolute;
     width: 2rem;
-    color: spruce.color(heading);
 
     svg {
       display: none;
