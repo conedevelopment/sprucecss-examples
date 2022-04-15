@@ -2,12 +2,13 @@ block variables
 -var time = Date.now();
 
 doctype html
-html(lang='en' data-theme-mode='light')
+html(lang='en')
   head
+    script
+      include ../../assets/js/theme-switcher.js
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title Spruce CSS - #{title}
-    script(src='../../assets/js/theme-switcher.js')
     link(rel='icon' href='../../assets/img/favicon.png' sizes='32x32')
     link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
     link(rel='preconnect' href='https://fonts.googleapis.com')
