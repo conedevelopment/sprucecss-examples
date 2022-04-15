@@ -5,12 +5,13 @@ doctype html
 html(lang='en')
   head
     script
-      include ../../assets/js/theme-switcher.js
+      include ../../assets/js/theme-detection.js
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='color-scheme' content='light dark')
     title Spruce CSS - #{title}
-    link(rel='icon' href='../../assets/img/favicon.png' sizes='32x32')
-    link(rel='stylesheet' href=`../../assets/css/main.css?time=${time}`)
+    link(rel='icon' href='../assets/img/favicon.png' sizes='32x32')
+    link(rel='stylesheet' href=`../assets/css/main.css?time=${time}`)
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap' rel='stylesheet')
@@ -18,6 +19,6 @@ html(lang='en')
     block content
     include ../../assets/icon/icons.svg
 
-    script(src='../../assets/js/theme-switcher-handle.js')
+    script(src='../assets/js/theme-switcher.js')
 
 

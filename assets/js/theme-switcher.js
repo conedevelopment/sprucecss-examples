@@ -1,29 +1,13 @@
 (function() {
-  let darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  let preferredTheme;
+  let themeSwitcher = document.querySelector('.theme-switcher'),
+      selected = localStorage.getItem('preferred-theme') ?? 'system';
 
-  function setTheme(theme) {
-    window.__theme = theme;
+  themeSwitcher.addEventListener('input', function(e) {
+    localStorage.setItem('preferred-theme', e.target.value);
+    document.documentElement.setAttribute('data-theme-mode', e.target.value);
+    themeSwitcher.setAttribute('data-theme-mode', e.target.value);
+  });
 
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme-mode', 'dark');
-    } else if (theme === 'system' && darkQuery.matches) {
-      document.documentElement.setAttribute('data-theme-mode', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme-mode');
-    }
-  };
-
-  window.__setPreferredTheme = function(theme) {
-    setTheme(theme);
-    try {
-      localStorage.setItem('preferred-theme', theme);
-    } catch (e) {}
-  };
-
-  try {
-    preferredTheme = localStorage.getItem('preferred-theme');
-  } catch (e) {}
-
-  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+  themeSwitcher.querySelector(`option[value="${selected}"]`).selected = 'selected';
+  themeSwitcher.setAttribute('data-theme-mode', selected);
 })();

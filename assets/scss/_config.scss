@@ -3,7 +3,7 @@
 $color-primary-light: hsl(215 100% 96%);
 $color-primary: hsl(214 98% 49%);
 
-$dark-color-primary: rgb(43, 135, 254);
+$dark-color-primary: hsl(214 99% 58%);
 $dark-color-secondary: hsl(227 92% 55%);
 
 $dark-color-black: hsl(206 88% 6%);
@@ -72,9 +72,10 @@ $dark-color-success: hsl(150 100% 33%);
       warning: hsl(48 89% 55%)
     ),
     btn: (
-      primary-background: rgb(43, 135, 254),
+      primary-background: hsl(214 99% 58%),
+      primary-background-hover: hsl(214 99% 48%),
       primary-foreground: $dark-color-white,
-      primary-shadow-focus: color.adjust(rgb(43, 135, 254), $alpha: -0.75),
+      primary-shadow-focus: color.adjust(hsl(214 99% 58%), $alpha: -0.75),
       secondary-background: $dark-color-secondary,
       secondary-foreground: $dark-color-white,
       secondary-shadow-focus: color.adjust($dark-color-secondary, $alpha: -0.75),
