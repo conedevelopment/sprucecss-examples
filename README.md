@@ -15,8 +15,7 @@
 
 ## Examples
 
-- **[Auth](https://sprucecss.com/examples/html/auth.html)**
-  A simple login layout.
+- **[Auth](https://sprucecss.com/examples/html/auth.html)**: A simple login layout.
 
 ## License
 
