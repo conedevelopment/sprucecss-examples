@@ -11,7 +11,12 @@
   </a>
 </p>
 
-**...**
+[Simple examples](https://sprucecss.com/examples/) for how to use and how to get started with Spruce CSS.
+
+## Examples
+
+- **[Auth](https://sprucecss.com/examples/html/auth.html)**
+  A simple login layout.
 
 ## License
 

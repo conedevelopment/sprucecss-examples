@@ -3,6 +3,9 @@ extends ../layout.pug
 block variables
   -var title = 'Auth Example'
 
+block styles
+  link(rel='stylesheet' href=`../assets/css/auth.css?time=${time}`)
+
 block content
   main(class='auth-screen')
     div(class='auth-screen__inner')
