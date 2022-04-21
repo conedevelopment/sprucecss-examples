@@ -17,7 +17,6 @@ block content
             h2(class='auth-sidebar__title') Morbi nec ultricies risus curabitur nibh eros
             p Morbi nec ultricies risus. Curabitur nibh eros, facilisis et elementum vitae
           div(class='auth-sidebar__footer')
-            include ../components/theme-switcher
             p(class='auth-sidebar__credit') Photo by #[a(href="https://unsplash.com/@maritafox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Marita Kavelashvili] on #[a(href="https://unsplash.com/s/photos/pine-forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") Unsplash]
       div(class='auth-screen__form')
         div(class='auth-form')
@@ -37,4 +36,6 @@ block content
                   span(class='form-label form-check__label') Remember me
               div(class='form-group')
                 button(class='btn btn--primary btn--lg btn--block' type='submit') Login
+        div(class='auth-screen__footer')
           p Not a member? #[a(href='#') Sign up]
+          include ../components/theme-switcher
