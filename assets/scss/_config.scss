@@ -41,11 +41,6 @@ $dark-color-success: hsl(150 100% 33%);
     ),
     breadcrumb: (
       arrow: hsl(0 0% 0% / 0.1)
-    ),
-    sidebar: (
-      border: hsl(214 100% 90%),
-      icon: hsl(245 37% 83%),
-      active: $color-primary-light
     )
   ),
   $dark-colors: (
@@ -110,14 +105,17 @@ $dark-color-success: hsl(150 100% 33%);
       border: $dark-color-gray-dark,
       caption: $dark-color-gray,
       heading: $dark-color-white,
-      hover: hsl(0 0% 0% / 0.05),
+      hover: hsl(0 0% 100% / 0.05),
       text: $dark-color-gray,
-      stripe: hsl(0 0% 0% / 0.025)
+      stripe: hsl(0 0% 100% / 0.025)
     ),
     scrollbar: (
       thumb-background: hsla(0, 0%, 100%, 0.15),
       thumb-background-hover: hsla(0, 0%, 100%, 0.25),
       track-background: hsla(0, 0%, 100%, 0.05)
+    ),
+    breadcrumb: (
+      arrow: hsl(0 0% 100% / 0.1)
     )
   ),
   $spacers: (

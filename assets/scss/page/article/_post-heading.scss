@@ -13,7 +13,7 @@
   }
 
   &__title {
-    font-size: spruce.responsive-font-size(4.5rem, 40, '5vw + 1rem');
+    font-size: spruce.responsive-font-size(4.5rem, 50, '5vw + 1rem');
     margin-block: 0;
   }
 
@@ -21,8 +21,10 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: spruce.spacer(m);
+    column-gap: spruce.spacer(m);
+    justify-content: center;
     margin-block-start: spruce.spacer(l);
+    row-gap: spruce.spacer(xs);
   }
 }
 
@@ -31,6 +33,7 @@
   align-items: center;
   display: flex;
   overflow-x: auto;
+  max-width: 100%;
   white-space: nowrap;
 
   > li {
