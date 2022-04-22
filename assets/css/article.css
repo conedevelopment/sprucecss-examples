@@ -1188,95 +1188,141 @@ legend {
   padding-inline: clamp(2rem, 5vw, 3rem);
 }
 
-.page-heading {
+.post-heading {
   text-align: center;
-  margin-block: 4.5rem;
+  margin-block: 8rem 4.5rem;
 }
-.page-heading__inner {
+.post-heading__inner {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
-.page-heading__title {
+.post-heading__title {
   font-size: clamp(2.7rem, 5vw + 1rem, 4.5rem);
   margin-block: 0;
 }
+.post-heading__meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-block-start: 3rem;
+}
 
 .breadcrumb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  overflow-x: auto;
   white-space: nowrap;
 }
-.breadcrumb-list span {
+.breadcrumb-list > li {
   align-items: center;
   display: inline-flex;
+  margin-block: 0;
 }
-.breadcrumb-list a {
-  text-decoration: none;
-}
-.breadcrumb-list .separator {
+.breadcrumb-list > li + li::before {
   border-bottom: 2px solid var(--spruce-breadcrumb-color-arrow);
   border-right: 2px solid var(--spruce-breadcrumb-color-arrow);
-  height: 0.4rem;
-  margin: 0 0.75rem;
+  content: "";
+  display: inline-flex;
+  height: 0.4em;
+  margin-inline: 0.75em;
   transform: rotate(-45deg);
-  width: 0.4rem;
+  width: 0.4em;
 }
 .breadcrumb-list [aria-current=page] {
-  display: inline-block;
-  max-width: 30rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  display: inline-flex;
+  text-align: start;
+  width: 20ch;
+}
+@supports (-webkit-line-clamp: 1) {
+  .breadcrumb-list [aria-current=page] {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+  }
 }
 
-.page-content {
+.post-author {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.post-author__avatar {
+  border-radius: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+.post-author__name {
+  color: var(--spruce-base-color-text);
+}
+
+.post-content {
   font-size: 1.0375rem;
 }
-.page-content > * {
+.post-content > * {
   margin-block-end: 0;
   margin-block-start: 0;
 }
-.page-content > * + * {
+.post-content > * + * {
   margin-block-start: 2rem;
 }
-.page-content :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
+.post-content :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
   margin-inline: auto;
   max-width: 50rem;
 }
-.page-content * + h1,
-.page-content * + h2,
-.page-content * + h3,
-.page-content * + h4,
-.page-content * + h5,
-.page-content * + h6 {
+.post-content * + h1,
+.post-content * + h2,
+.post-content * + h3,
+.post-content * + h4,
+.post-content * + h5,
+.post-content * + h6 {
   margin-top: 3rem;
 }
-.page-content h1 + *,
-.page-content h2 + *,
-.page-content h3 + *,
-.page-content h4 + *,
-.page-content h5 + *,
-.page-content h6 + * {
+.post-content h1 + *,
+.post-content h2 + *,
+.post-content h3 + *,
+.post-content h4 + *,
+.post-content h5 + *,
+.post-content h6 + * {
   margin-top: 1rem;
 }
-.page-content img,
-.page-content iframe {
+.post-content img,
+.post-content iframe {
   border-radius: 0.5rem;
 }
-.page-content .gallery {
+.post-content .gallery {
   display: grid;
   grid-gap: 2rem;
 }
 @supports (width: min(10rem, 100%)) {
-  .page-content .gallery {
+  .post-content .gallery {
     grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
   }
 }
-.page-content .gallery-item {
+.post-content .gallery-item {
   margin-block: 0;
 }
-.page-content .gallery img {
+.post-content .gallery img {
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+.post-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-block: 3rem 4.5rem;
 }
