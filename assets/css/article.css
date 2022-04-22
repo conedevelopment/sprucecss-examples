@@ -1176,3 +1176,107 @@ legend {
 .theme-switcher__select {
   padding-inline-start: 2rem;
 }
+
+.container--wide {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: clamp(2rem, 5vw, 3rem);
+}
+.container--narrow {
+  margin-inline: auto;
+  max-width: 65rem;
+  padding-inline: clamp(2rem, 5vw, 3rem);
+}
+
+.page-heading {
+  text-align: center;
+  margin-block: 4.5rem;
+}
+.page-heading__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.page-heading__title {
+  font-size: clamp(2.7rem, 5vw + 1rem, 4.5rem);
+  margin-block: 0;
+}
+
+.breadcrumb-list {
+  white-space: nowrap;
+}
+.breadcrumb-list span {
+  align-items: center;
+  display: inline-flex;
+}
+.breadcrumb-list a {
+  text-decoration: none;
+}
+.breadcrumb-list .separator {
+  border-bottom: 2px solid var(--spruce-breadcrumb-color-arrow);
+  border-right: 2px solid var(--spruce-breadcrumb-color-arrow);
+  height: 0.4rem;
+  margin: 0 0.75rem;
+  transform: rotate(-45deg);
+  width: 0.4rem;
+}
+.breadcrumb-list [aria-current=page] {
+  display: inline-block;
+  max-width: 30rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-content {
+  font-size: 1.0375rem;
+}
+.page-content > * {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.page-content > * + * {
+  margin-block-start: 2rem;
+}
+.page-content :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p, blockquote) {
+  margin-inline: auto;
+  max-width: 50rem;
+}
+.page-content * + h1,
+.page-content * + h2,
+.page-content * + h3,
+.page-content * + h4,
+.page-content * + h5,
+.page-content * + h6 {
+  margin-top: 3rem;
+}
+.page-content h1 + *,
+.page-content h2 + *,
+.page-content h3 + *,
+.page-content h4 + *,
+.page-content h5 + *,
+.page-content h6 + * {
+  margin-top: 1rem;
+}
+.page-content img,
+.page-content iframe {
+  border-radius: 0.5rem;
+}
+.page-content .gallery {
+  display: grid;
+  grid-gap: 2rem;
+}
+@supports (width: min(10rem, 100%)) {
+  .page-content .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+  }
+}
+.page-content .gallery-item {
+  margin-block: 0;
+}
+.page-content .gallery img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}

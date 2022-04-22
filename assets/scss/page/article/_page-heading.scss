@@ -1,0 +1,49 @@
+@use 'sprucecss/scss/spruce';
+
+.page-heading {
+  text-align: center;
+  margin-block: spruce.spacer(xl);
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: spruce.spacer(xs);
+  }
+
+  &__title {
+    font-size: spruce.responsive-font-size(4.5rem, 40, '5vw + 1rem');
+    margin-block: 0;
+  }
+}
+
+.breadcrumb-list {
+  white-space: nowrap;
+
+  span {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .separator {
+    border-bottom: 2px solid spruce.color(arrow, breadcrumb);
+    border-right: 2px solid spruce.color(arrow, breadcrumb);
+    height: 0.4rem;
+    margin: 0 0.75rem;
+    transform: rotate(-45deg);
+    width: 0.4rem;
+  }
+
+  [aria-current='page'] {
+    display: inline-block;
+    max-width: 30rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
