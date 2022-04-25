@@ -8,7 +8,7 @@
     "pug-prod": "pug --obj pug/assets/data.json pug/templates/page --out html/ --pretty",
     "sass-compile-dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded assets/scss:assets/css",
     "dev": "npm-run-all --parallel pug-dev sass-compile-dev browser-sync",
-    "sass-compile-prod": "sass --load-path=node_modules --load-path=scss --no-source-map --style=compressed assets/scss:assets/css",
+    "sass-compile-prod": "sass --load-path=node_modules --load-path=scss --no-source-map --style=expanded assets/scss:assets/css",
     "sass-lint": "stylelint assets/scss/**/*.scss",
     "sass-lint-with-fix": "stylelint assets/scss/**/*.scss --fix"
   },
