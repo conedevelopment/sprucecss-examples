@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block variables
+  -var title = 'Form (RTL) Example'
+
+block styles
+  link(rel='stylesheet' href=`../assets/css/form.css?time=${time}`)
+
+block content
+  main(class='form-screen')
+    h1 Account
+    include ../components/form/elements
